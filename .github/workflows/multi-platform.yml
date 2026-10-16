@@ -1,0 +1,29 @@
+name: Build Geode Mod (PC & Android)
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Mod for Windows & Android
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          combine: true
+
+      - name: Crear Link de Descarga Directa (Releases)
+        uses: softprops/action-gh-release@v2
+        if: success()
+        with:
+          tag_name: v1.0.0
+          name: "Emplay Mod Menu v1.0.0 (Android & PC)"
+          body: "Descarga directa del archivo .geode para Android y PC. Hecho por emplay1350."
+          files: build-output/*.geode

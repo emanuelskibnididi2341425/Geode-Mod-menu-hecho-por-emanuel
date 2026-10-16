@@ -1,0 +1,21 @@
+{
+    "geode": "3.4.0",
+    "gd": {
+        "win": "2.206",
+        "android": "2.206",
+        "mac": "2.206"
+    },
+    "id": "emplay1350.mod_menu",
+    "name": "Emplay Mod Menu",
+    "version": "v1.0.0",
+    "developer": "emplay1350",
+    "description": "Mod Menu multiplataforma (PC y Android) con Noclip, Speedhack, Icon Bypass, Atajos y mas. Hecho por emplay1350.",
+    "settings": {
+        "show-android-btn": {
+            "name": "Mostrar boton flotante (Android / PC)",
+            "description": "Muestra un boton en la esquina de la pantalla para abrir el menu facilmente en pantallas tactiles.",
+            "type": "bool",
+            "default": true
+        }
+    }
+}
